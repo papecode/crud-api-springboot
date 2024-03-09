@@ -6,6 +6,3 @@ FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /target/crud-0.0.1-SNAPSHOT.jar crud.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","crud.jar"]
-
-
-ENTRYPOINT ["top", "-b"]
